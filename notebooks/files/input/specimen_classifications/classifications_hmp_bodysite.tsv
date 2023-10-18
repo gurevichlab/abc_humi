@@ -1,0 +1,48 @@
+misc_param_hmp_body_site	Body_site	Specimen	Status
+Heart	Unclassified	Unclassified	Disease
+Vaginal	Urogenital	Urogenital_vagina	Healthy
+Gingival crevices	Oral	Oral_plaque	Healthy
+Right arm	Skin	Skin_arm	Healthy
+Left arm	Skin	Skin_arm	Healthy
+Stomach	Gut	Gut_stomach	Healthy
+Intestinal tract	Gut	Gut_unclassified	Healthy
+Urinary tract	Urogenital	Urogenital_urinary_tract	Healthy
+Pharyngeal mucosa	Respiratory	Respiratory_upper	Healthy
+Respiratory tract	Respiratory	Respiratory_unclassified	Healthy
+Blood	Blood	Blood	Disease
+Teeth	Oral	Oral_cavity	Healthy
+Periodontal	Oral	Oral_cavity	Healthy
+Nasopharynx	Respiratory	Respiratory_upper	Healthy
+Mouth	Oral	Oral_cavity	Healthy
+Endometrium	Urogenital	Urogenital_uterus	Healthy
+Nasal	Respiratory	Respiratory_upper	Healthy
+Lymph Node	Unclassified	Unclassified	Disease
+Colon	Gut	Gut_colon	Healthy
+Foregut	Gut	Gut_unclassified	Healthy
+Gut	Gut	Gut_unclassified	Healthy
+Upper respiratory tract	Respiratory	Respiratory_upper	Healthy
+Conjunctiva	Eye	Eye	Healthy
+Throat	Respiratory	Respiratory_upper	Healthy
+Urethra	Urogenital	Urogenital_urinary_tract	Healthy
+Synovial Fluid	Joint	Joint_unclassified	Healthy
+Liver	Gut	Gut_liver	Healthy
+Cerebrospinal Fluid	Nervous	Nervous_cns	Disease
+Lung aspirate	Respiratory	Respiratory_lower	Healthy
+Gum margin of molar tooth on buccal side	Oral	Oral_plaque	Healthy
+Transverse colon	Gut	Gut_colon	Healthy
+Ascending colon	Gut	Gut_colon	Healthy
+Rectal	Gut	Gut_colon	Healthy
+Duodenum	Gut	Gut_small_intestine	Healthy
+Sigmoid colon	Gut	Gut_colon	Healthy
+Terminal ileum	Gut	Gut_small_intestine	Healthy
+Subgingival	Oral	Oral_plaque	Healthy
+Descending colon	Gut	Gut_colon	Healthy
+Dental plaque	Oral	Oral_plaque	Healthy
+Gall bladder	Gut	Gut_gallbladder	Healthy
+Urinary Tract	Urogenital	Urogenital_urinary_tract	Healthy
+Bone	Bone	Bone_unclassified	Disease
+Lymph Nodes	Unclassified	Unclassified	Disease
+Ear	Skin	Skin_head	Healthy
+Spinal Cord	Nervous	Nervous_cns	Disease
+Wound	Unclassified	Unclassified	Disease
+Intestinal Tract	Gut	Gut_unclassified	Healthy

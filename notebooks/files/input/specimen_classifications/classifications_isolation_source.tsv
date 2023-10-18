@@ -1,0 +1,181 @@
+isolation_source	Body_site	Specimen	Status
+skin from right arm of human male	Skin	Skin_arm	Healthy
+oral	Oral	Oral_unclassified	Healthy
+vagina	Urogenital	Urogenital_vagina	Healthy
+gastrointestinal tract	Gut	Gut_unclassified	Healthy
+skin	Skin	Skin_unclassified	Healthy
+amniotic fluid	Urogenital	Urogenital_uterus	Healthy
+human oral cavity	Oral	Oral_cavity	Healthy
+Intestinal epithelium	Gut	Gut_small_intestine	Healthy
+human skin microbiome	Skin	Skin_unclassified	Healthy
+oral cavity	Oral	Oral_cavity	Healthy
+soft tissue infection of skin	Skin	Skin_unclassified	Disease
+urogenital tract, vaginal	Urogenital	Urogenital_vagina	Healthy
+oral, gingival crevices	Oral	Oral_plaque	Healthy
+gastrointestinal tract, foregut	Gut	Gut_unclassified	Healthy
+airways	Respiratory	Respiratory_unclassified	Healthy
+gastrointestinal tract, gut	Gut	Gut_unclassified	Healthy
+blood	Blood	Blood	Disease
+airways, upper respiratory tract	Respiratory	Respiratory_upper	Healthy
+airways, nasal	Respiratory	Respiratory_upper	Healthy
+oral cavity, gingival crevices	Oral	Oral_plaque	Healthy
+skin, finger	Skin	Skin_arm	Healthy
+gluteal crease	Skin	Skin_leg	Healthy
+nare	Respiratory	Respiratory_upper	Healthy
+alar crease	Skin	Skin_head	Healthy
+lung	Respiratory	Respiratory_lower	Healthy
+occiput	Skin	Skin_head	Healthy
+toe web	Skin	Skin_leg	Healthy
+retroauricular crease	Skin	Skin_head	Healthy
+axilla	Skin	Skin_arm	Healthy
+glabella	Skin	Skin_head	Healthy
+hypothenar palm	Skin	Skin_arm	Healthy
+plantar heel	Skin	Skin_leg	Healthy
+umbilicus	Skin	Skin_torso	Healthy
+manubrium	Skin	Skin_torso	Healthy
+joint	Joint	Joint_unclassified	Healthy
+blood sample taken from a clinical pediatric case of invasive pneumococcal disease	Blood	Blood	Disease
+stool, GI tract	Gut	Gut_colon	Healthy
+oral cavity- mouth	Oral	Oral_cavity	Healthy
+subgingival plaque biofilm	Oral	Oral_plaque	Healthy
+dental plaque biofilm of the third molar tooth of an individual diagnosed with pericoronitis	Oral	Oral_plaque	Disease
+oral cavity - mouth	Oral	Oral_cavity	Healthy
+urogenital tract	Urogenital	Urogenital_unclassified	Healthy
+supragingival plaque biofilm of a molar	Oral	Oral_plaque	Healthy
+gingival crevice	Oral	Oral_plaque	Healthy
+dental plaque biofilm of the third molar	Oral	Oral_plaque	Healthy
+subgingival plaque biofilm of oral cavity	Oral	Oral_plaque	Healthy
+oral cavity, subgingival dental plaque	Oral	Oral_plaque	Healthy
+vaginal tract	Urogenital	Urogenital_vagina	Healthy
+fecal sample	Gut	Gut_colon	Healthy
+human fecal sample	Gut	Gut_colon	Healthy
+oral swab from a patient with Crohn's disease	Oral	Oral_unclassified	Disease
+healthy biopsy tissue from a patient with Crohn's disease	Gut	Gut_colon	Disease
+inflamed biopsy tissue from a patient with Crohn's disease	Gut	Gut_colon	Disease
+feces	Gut	Gut_colon	Healthy
+blood of a 35 year-old male	Blood	Blood	Disease
+Rectum	Gut	Gut_colon	Healthy
+stool	Gut	Gut_colon	Healthy
+urinary tract	Urogenital	Urogenital_urinary_tract	Healthy
+respiratory	Respiratory	Respiratory_unclassified	Healthy
+abdominal	Gut	Gut_unclassified	Healthy
+Respiratory	Respiratory	Respiratory_unclassified	Healthy
+Vagina	Urogenital	Urogenital_vagina	Healthy
+urine	Urogenital	Urogenital_urinary_tract	Healthy
+Urinary tract	Urogenital	Urogenital_urinary_tract	Healthy
+vaginal/rectal	Urogenital	Urogenital_vagina	Healthy
+sputum(induced)	Respiratory	Respiratory_lower	Healthy
+tracheal aspirate	Respiratory	Respiratory_lower	Healthy
+bronchial washing	Respiratory	Respiratory_lower	Healthy
+sputum	Respiratory	Respiratory_lower	Healthy
+vaginal	Urogenital	Urogenital_vagina	Healthy
+left great toe	Skin	Skin_leg	Healthy
+bronchoalveolar lavage	Respiratory	Respiratory_lower	Healthy
+cyst gastrointestinal	Gut	Gut_unclassified	Disease
+cervical	Urogenital	Urogenital_uterus	Healthy
+sputum (induced)	Respiratory	Respiratory_lower	Healthy
+abdominal fluid	Gut	Gut_unclassified	Disease
+aspirate left nose	Respiratory	Respiratory_upper	Healthy
+wound right cheek	Skin	Skin_head	Disease
+ocular cornea	Eye	Eye	Healthy
+urine cathetered	Urogenital	Urogenital_urinary_tract	Healthy
+tisssue	Unclassified	Unclassified	Unclassified
+wound right ear	Skin	Skin_head	Disease
+abscess right leg	Skin	Skin_leg	Disease
+abscess right neck	Skin	Skin_head	Disease
+genital	Urogenital	Urogenital_unclassified	Healthy
+throat	Respiratory	Respiratory_upper	Healthy
+abscess hepatic	Gut	Gut_liver	Disease
+wound right foot	Skin	Skin_leg	Disease
+abscess left buttock	Skin	Skin_leg	Disease
+wound right thigh	Skin	Skin_leg	Disease
+wound labia	Urogenital	Urogenital_vagina	Disease
+aspirate gallbladder	Gut	Gut_gallbladder	Healthy
+trachea aspirate	Respiratory	Respiratory_lower	Healthy
+wound head	Skin	Skin_head	Disease
+tisssue right buttocks	Skin	Skin_leg	Healthy
+abscess abdominal	Gut	Gut_unclassified	Disease
+wound mouth	Oral	Oral_unclassified	Disease
+csf	Nervous	Nervous_cns	Disease
+wound r breast	Skin	Skin_torso	Disease
+bone tibia	Bone	Bone_leg	Disease
+abscess pelvic	Urogenital	Urogenital_unclassified	Disease
+abscess perianal	Gut	Gut_colon	Disease
+wound misc	Unclassified	Unclassified	Disease
+trachael aspirate	Respiratory	Respiratory_lower	Healthy
+abscess l hip	Skin	Skin_leg	Disease
+urine cvs	Urogenital	Urogenital_urinary_tract	Healthy
+wound scalp	Skin	Skin_head	Disease
+sputum induced	Respiratory	Respiratory_lower	Healthy
+wound perineum	Skin	Skin_torso	Disease
+unspecified human	Unclassified	Unclassified	Unclassified
+bone sacral	Bone	Bone_torso	Disease
+ocular l eye	Eye	Eye	Healthy
+wound abdominal	Gut	Gut_unclassified	Disease
+aspirate l hip	Joint	Joint_leg	Healthy
+wound l foot	Skin	Skin_leg	Disease
+abscess labia	Urogeniral	Urogenital_vagina	Disease
+wound neck	Skin	Skin_head	Disease
+Bronchoalveolar lavage	Respiratory	Respiratory_lower	Healthy
+abscess l neck	Skin	Skin_head	Disease
+tissue l ear	Skin	Skin_head	Healthy
+wound vulva	Urogeniral	Urogenital_vagina	Disease
+wound r ear	Skin	Skin_head	Disease
+tissue l great toe	Skin	Skin_leg	Healthy
+tissies l great toe	Skin	Skin_leg	Healthy
+tissue r heel	Skin	Skin_leg	Healthy
+abscess r leg	Skin	Skin_leg	Disease
+wound orbital apex	Eye	Eye	Disease
+abscess groin	Urogenital	Urogenital_groin	Disease
+trach aspirate	Respiratory	Respiratory_lower	Healthy
+wound r hand	Skin	Skin_arm	Disease
+abscess l cheek	Skin	Skin_head	Disease
+wound r leg	Skin	Skin_leg	Disease
+drainage jackson pratt	Unclassified	Unclassified	Unclassified
+bone misc	Bone	Bone_unclassified	Disease
+aspirate flank	Unclassified	Unclassified	Unclassified
+abscess facial	Skin	Skin_head	Disease
+nasal	Respiratory	Respiratory_upper	Healthy
+aspirate abdominal	Gut	Gut_unclassified	Disease
+abscess l foot	Skin	Skin_leg	Disease
+joint fluid r hip	Joint	Joint_leg	Healthy
+wound gastric	Gut	Gut_unclassified	Disease
+urine cath	Urogenital	Urogenital_urinary_tract	Healthy
+wound r groin	Urogenital	Urogenital_groin	Disease
+wound r buttocks	Skin	Skin_leg	Disease
+wound sacral	Bone	Bone_torso	Disease
+tissue r knee	Skin	Skin_leg	Healthy
+bone head	Bone	Bone_head	Disease
+pleural fluid r	Respiratory	Respiratory_lower	Healthy
+wound sinus	Respiratory	Respiratory_upper	Disease
+bronch wash cf	Respiratory	Respiratory_lower	Healthy
+tisssue tibia	Bone	Bone_leg	Disease
+bone r great toe	Bone	Bone_leg	Disease
+wound l leg	Skin	Skin_leg	Disease
+tissues great toe	Skin	Skin_leg	Healthy
+tissue humerus	Bone	Bone_leg	Disease
+abscess peri-rectal	Gut	Gut_colon	Disease
+blood l hand	Blood	Blood	Disease
+abscess r breast	Skin	Skin_torso	Disease
+sinus	Respiratory	Respiratory_upper	Healthy
+aspirate chest	Respiratory	Respiratory_lower	Healthy
+blood central line	Blood	Blood	Disease
+wound l knee	Skin	Skin_leg	Disease
+genital vulva	Urogenital	Urogenital_vagina	Healthy
+tisssue r	Unclassified	Unclassified	Unclassified
+fluid l knee	Joint	Joint_leg	Healthy
+wound/ left index finger	Skin	Skin_arm	Disease
+wound	Unclassified	Unclassified	Disease
+abscess axilla	Skin	Skin_arm	Disease
+bone left fourth toe	Bone	Bone_leg	Disease
+joint fluid	Joint	Joint_unclassified	Healthy
+bone	Bone	Bone_unclassified	Disease
+abscess	Unclassified	Unclassified	Disease
+wound r foot	Skin	Skin_leg	Disease
+abscess misc	Unclassified	Unclassified	Disease
+wound knee	Skin	Skin_leg	Disease
+tissue left hip	Skin	Skin_leg	Healthy
+Genital (Female)	Urogenital	Urogenital_unclassified	Healthy
+eye	Eye	Eye	Healthy
+wound from right breast	Skin	Skin_torso	Disease
+GI tract	Gut	Gut_unclassified	Healthy

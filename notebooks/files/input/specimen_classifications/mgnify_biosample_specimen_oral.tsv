@@ -1,0 +1,14 @@
+env_broad_scale	env_local_scale	env_medium	isolation_source	Specimen
+human-associated habitat	human oral cavity	not provided	not provided	Oral_cavity
+human-associated habitat	human oral cavity	saliva	Human saliva	Oral_saliva
+human-associated habitat	human oral cavity	subgingival plaque	Human Oral Subgingival Plaque	Oral_plaque
+human	oral cavity	saliva	human saliva metagenome	Oral_saliva
+human oral	human oral	saliva	saliva	Oral_saliva
+Human oral metagenome	Human oral cavity	Human oral cavity	human oral metagenome	Oral_cavity
+Human oral metagenome	Human oral cavity	Saliva	human oral metagenome	Oral_cavity
+Human oral metagenome	Human oral cavity	Saliva	human saliva metagenome	Oral_cavity
+Human oral metagenome	Human oral cavity	Subgingival plaque	human oral metagenome	Oral_cavity
+Human saliva metagenome	Human oral cavity	Saliva	human saliva metagenome	Oral_saliva
+NA	NA	NA	dental plaque	Oral_plaque
+NA	NA	NA	supragingival plaque isolated from 88 juvenile twins	Oral_plaque
+NA	NA	NA	tongue scraping	Oral_cavity

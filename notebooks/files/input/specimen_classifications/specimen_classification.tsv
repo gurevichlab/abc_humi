@@ -1,0 +1,17 @@
+Specimen	Category	Specimen_Type	Original_HMP	Original_JGI
+Gut_unclassified	Gut	Gut_unclassified	None	Digestive system/Host-associated,Digestive system/Human,Digestive system/Human gut,Digestive system/Human host-associated,Digestive system/Premature human infant gut
+Gut_colon	Gut	Colon	feces,stool	Digestive system/Huma fecal,Digestive system/Human colon tissue,Digestive system/Human fecal,Digestive system/Human feces
+Gut_bile_duct	Gut	Bile_duct	None	Digestive system/Human bile duct
+Oral_unclassified	Oral	Oral_unclassified	None	Digestive system/Human oral
+Oral_plaque	Oral	Plaque	attached keratinized gingiva,subgingival plaque,supragingival plaque	Digestive system/Fossilized dental plaque
+Oral_mucosa	Oral	Mucosa	buccal mucosa	None
+Oral_saliva	Oral	Saliva	portion of saliva,Saliva	None
+Oral_cavity	Oral	Oral_cavity	hard palate,tongue dorsum	None
+Respiratory_unclassified	Respiratory	Respiratory_unclassified	None	Respiratory system/Human
+Respiratory_upper	Respiratory	Upper_respiratory	anterior nares,palatine tonsils,throat	None
+Respiratory_lower	Respiratory	Lower_respiratory	None	Respiratory system/Human lung
+Urogenital_unclassified	Urogenital	Urogenital_unclassified	None	Reproductive system/Human
+Urogenital_vagina	Urogenital	Vagina	mid vagina,vaginal introitus,posterior fornix	None
+Skin_unclassified	Skin	Skin_unclassified	None	Skin/Human,Skin/Human skin
+Skin_head	Skin	Head	left retroauricular crease,right retroauricular crease	None
+Skin_arm	Skin	Arm	right antecubital fossa	None

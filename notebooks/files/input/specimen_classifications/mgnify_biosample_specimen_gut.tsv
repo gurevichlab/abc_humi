@@ -1,0 +1,42 @@
+env_broad_scale	env_local_scale	env_medium	isolation_source	Specimen
+				Gut_unclassified
+-	-	-		Gut_unclassified
+bodily fluid material biome [ENVO:02000019]	excreta material [ENVO:02000022]	fecal material [ENVO:00002003]	fecal material	Gut_colon
+bodily fluid material biome [ENVO:02000019]	excreta material [ENVO:02000022]	fecal material [ENVO:00002003]	NA	Gut_colon
+ENVO:mammalia-associated habitat	ENVO:mammalia-associated habitat	ENVO:feces		Gut_colon
+ENVO:urban biome	ENVO:human-associated habitat	ENVO:feces		Gut_colon
+human-associated habitat [ENVO:00009003]	intestine environment [ENVO:2100002]	feces		Gut_colon
+human-associated habitat	feces	feces		Gut_colon
+human-associated habitat	human gut	faeces	human gut	Gut_colon
+human-associated habitat	human gut		human gut	Gut_unclassified
+human-associated habitat	human gut	NA	human gut	Gut_unclassified
+human-associated habitat	intestine environment	feces		Gut_colon
+		human faeces		Gut_colon
+human feces	human gut	feces		Gut_colon
+human gut	human-associated habitat	faeces		Gut_colon
+human gut	human-associated habitat	faeces	human stool	Gut_colon
+human gut	human gut	human gut		Gut_unclassified
+Human gut stool	Human gut stool	Human gut stool		Gut_colon
+human	gut	Stool	human stool	Gut_colon
+human	gut	Stool	human stools	Gut_colon
+human	human gut	feces		Gut_colon
+missing	healthy infant feces	feces		Gut_colon
+missing	missing	missing		Gut_unclassified
+		NA		Gut_unclassified
+		NA	Faecal sample	Gut_colon
+		NA	feces	Gut_colon
+		NA	host stool sample	Gut_colon
+		NA	Human feces	Gut_colon
+NA	NA	NA	feces	Gut_colon
+NA	NA	NA	gastrointestinal tract	Gut_unclassified
+NA	NA	NA	NA	Gut_unclassified
+NA	NA	NA	rectal cultures	Gut_colon
+NA	NA	NA	rectal swab	Gut_colon
+NA	NA	NA	small intestine	Gut_small_intestine
+NA	NA	NA	stool	Gut_colon
+NA	NA	NA	substrain; original isolate obtained from human feces in 1934	Gut_colon
+		NA	Preterm infant faecal sample	Gut_colon
+		NA	stool	Gut_colon
+		NA	washed fiber of faecal sample	Gut_colon
+not applicable	not applicable	not applicable		Gut_unclassified
+Stool sample	Stool sample	Microbial DNA		Gut_colon

@@ -1,0 +1,16 @@
+# tsv file with columns `id` `path_fna` and (optionally) `path_antismash`
+input-tsv: "test_data/summary.tsv"
+
+humi-gbk: "resources/BGC_All.tar.gz"
+bigscape-cache: "resources/bigscape_cache.tar.gz"
+
+
+antismash:
+  threads: 10
+
+# bigscape command line args
+bigscape: 
+  cores: 32
+  cutoffs: 0.6
+  clan_cutoff: 0.6 0.8
+

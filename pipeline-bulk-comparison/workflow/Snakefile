@@ -1,0 +1,213 @@
+configfile: "config/config.yml"
+import os
+import pandas as pd
+
+
+onsuccess:
+    shell("cp -v {log} logs/snakemake_$(date +'%FT%H%M%S').log")
+
+onerror:
+    shell("cp -v {log} logs/snakemake_$(date +'%FT%H%M%S').log")
+
+
+df_input =  pd.read_csv(config['input-tsv'], sep='\t')
+assert df_input['id'].is_unique, "Input ids must be unique."
+
+samples = {r['id']: r.dropna().to_dict() for _, r in df_input.iterrows()}
+
+bigscape_args = ' '.join(f'--{k} {v}' for k, v in config['bigscape'].items())
+antismash_threads = 1 if 'antismash' not in config else config['antismash'].get('threads', 1)
+bigscape_threads = 1 if 'bigscape' not in config else config['bigscape'].get('cores', 1)
+
+_bigscape_env = config.get('bigscape-env', 'envs/bigscape.yml')
+_basics_env = config.get('pipeline-env', 'envs/abc_humi_basics.yml')
+
+
+
+
+
+rule run_antismash:
+    input:
+        fna=lambda wildcards: samples[wildcards.sample]['path_fna']
+    output:
+        gbk='results/antismash/{sample}/{sample}.gbk',
+        json='results/antismash/{sample}/{sample}.json',
+        dir=directory('results/antismash/{sample}')
+    params:
+        outdir='results/antismash',
+        basename='{sample}'
+    benchmark:
+         'benchmarks/antismash/{sample}.txt'
+    threads:
+        antismash_threads
+    log:
+        'logs/antismash/{sample}.log'
+    shell:
+        """
+        set +e
+        bash workflow/scripts/run_antismash "{input.fna}" "{params.outdir}" --output-basename "{params.basename}" --genefinding-tool=prodigal-m --cpus {threads} -v &> "{log}"
+        exitcode=$?
+        echo "Exit code:" $exitcode >> "{log}"
+        if [ $exitcode -eq 0 ]; then
+            exit 0
+        elif [ $exitcode -eq 1 ]; then
+            mkdir -p "{output.dir}"
+            touch "{output.json}" 
+            touch "{output.gbk}"
+            exit 0
+        else
+            exit 1
+        fi
+        """
+
+
+def get_antismash_input(wildcards):
+    return samples[wildcards.sample].get('path_antismash', rules.run_antismash.output.dir)
+
+
+rule antismash_summary:
+    input:
+        get_antismash_input
+    output:
+        tsv='results/regions/{sample}.tsv'
+    conda:
+       _basics_env
+    shell:
+        """python3 workflow/scripts/antismash_summary.py {input} {output}"""
+
+
+rule prepare_bigscape_input:
+    input:
+        tsvs=expand(rules.antismash_summary.output.tsv,  sample=samples.keys())
+    output:
+        tsv='results/summary/antismash_summary.tsv',
+        dir=directory('results/bigscape/input/query')
+    run:
+        dfs = []
+        for tsv in input.tsvs:
+            _df = pd.read_csv(tsv, sep='\t')
+            _df['Sample_ID'] = os.path.basename(tsv).rsplit('.', 1)[0]
+            dfs.append(_df)
+        
+        df = pd.concat(dfs)
+        df['Path_bigscape']  = df.apply(lambda r: f"results/bigscape/input/query/{r['Sample_ID']}___{r['GBK']}", axis=1)
+        df.to_csv(output.tsv, index=False, sep='\t')
+
+        os.makedirs(output.dir, exist_ok=True)
+        for _, r in df.iterrows():
+            os.symlink(os.path.abspath(r['Path_antismash']), r['Path_bigscape'])
+
+
+rule extract_hmsb:
+    output: 
+        dir=directory('results/bigscape/input/ABC_HuMi')
+    shell:
+        """
+        mkdir -p {output}
+        tar -xzf {config[humi-gbk]}  -C {output}
+        """
+
+
+rule extract_preprocessed_cache:
+    output:
+        cache=directory('results/bigscape/output/cache')
+    shell:
+        """
+        CACHE_DIR=$(dirname {output.cache})
+        mkdir -p "$CACHE_DIR"
+        tar -xzf {config[bigscape-cache]} -C "$CACHE_DIR"
+        """
+
+
+rule install_bigscape:
+    output:
+        py='resources/BiG-SCAPE-1.1.5/bigscape.py'
+    shell:
+        """
+        cd resources
+        wget https://github.com/medema-group/BiG-SCAPE/archive/refs/tags/v1.1.5.zip
+        unzip v1.1.5.zip
+        rm v1.1.5.zip
+        """
+
+
+rule download_pfam_db:
+    output:
+        dir=directory("resources/pfam")
+    threads:
+        1
+    shell:
+        """
+        mkdir {output.dir}
+        wget -P {output.dir} https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam35.0/Pfam-A.hmm.gz 
+        gunzip -c {output.dir}/Pfam-A.hmm.gz > {output.dir}/Pfam-A.hmm
+        """
+
+
+def get_pfam_db(wildcards):
+    return config.get('pfam-dir', rules.download_pfam_db.output.dir)
+
+
+rule run_bigscape:
+    input:
+        rules.extract_hmsb.output.dir,
+        cache_dir=rules.extract_preprocessed_cache.output,
+        input_dir=rules.prepare_bigscape_input.output.dir,
+        script=lambda _: config.get('path-bigscape', rules.install_bigscape.output.py),
+        pfam_dir=get_pfam_db
+    output:
+        html='results/bigscape/output/index.html',
+        flag='results/bigscape/flag_completed'
+    log:
+        'logs/bigscape/bigscape.log'
+    params:
+        args=bigscape_args
+    benchmark:
+         'benchmarks/bigscape/bigscape.txt'
+    threads:
+        bigscape_threads
+    conda:
+        _bigscape_env
+    shell:
+        """
+        python {input.script} --verbose --mibig \
+            --include_gbk_str region HMBGC \
+            {params.args} \
+            --pfam_dir {input.pfam_dir} \
+            --cores {threads} \
+            --inputdir $(dirname "{input.input_dir}") \
+            --outputdir $(dirname "{input.cache_dir}") \
+            &> "{log}"
+        touch {output.flag}
+        """
+
+
+def get_cutoffs(val):
+    cutoffs = map(float, val.split())
+    return list(map(lambda x: f'{x:.2f}'), cutoffs)
+
+
+rule bigscape_summary:
+    input: 
+        html=rules.run_bigscape.output.html
+    output: 
+        tsv='results/summary/bigscape_summary.tsv'
+    params:
+        cutoff_gcf=f"{float(config['bigscape'].get('clan_cutoff', '0.30 0.70').split()[0]):.2f}",
+        cutoff_gcc=f"{float(config['bigscape'].get('clan_cutoff', '0.30 0.70').split()[1]):.2f}"
+    conda: 
+        _basics_env
+    shell:
+        """
+        python workflow/scripts/bigscape_summary.py $(dirname {input.html}) {params.cutoff_gcf} {params.cutoff_gcc} {output.tsv}
+        """
+
+
+rule all:
+    default_target: True
+    input:
+        rules.prepare_bigscape_input.output,
+        rules.bigscape_summary.output,
+        flag=rules.run_bigscape.output.flag,
+    shell: 
+        "rm {input.flag}"
